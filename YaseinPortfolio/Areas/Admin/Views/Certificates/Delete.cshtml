@@ -1,0 +1,57 @@
+﻿@model YaseinPortfolio.Models.Certificate
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete Certificate</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Certificate</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CertificateName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CertificateName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CertificateImg)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CertificateImg)
+        </dd>
+        <dt class = "col-sm-2">
+         @Html.DisplayNameFor(model => model.CertificateGiver)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CertificateGiver)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CertificateReleaseDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CertificateReleaseDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CertificatePdf)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CertificatePdf)
+        </dd>
+        <dt class = "col-sm-2">
+         @Html.DisplayNameFor(model => model.CertificateDescription)
+        </dt>
+        <dd class = "col-sm-10">
+         @Html.DisplayFor(model => model.CertificateDescription)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CertificateId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

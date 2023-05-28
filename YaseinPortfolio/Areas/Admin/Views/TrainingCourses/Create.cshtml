@@ -1,0 +1,45 @@
+﻿@model YaseinPortfolio.Models.TrainingCourse
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create New Training Course</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TrainingCourseName" class="control-label"></label>
+                <input asp-for="TrainingCourseName" class="form-control" />
+                <span asp-validation-for="TrainingCourseName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrainingCourseImg" class="control-label"></label>
+            <input asp-for="TrainingCourseImg" type="file" class="form-control" />
+                <span asp-validation-for="TrainingCourseImg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CertificateBodyIssuingTheCertificate" class="control-label"></label>
+                <input asp-for="CertificateBodyIssuingTheCertificate" class="form-control" />
+                <span asp-validation-for="CertificateBodyIssuingTheCertificate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrainingCoursePdfUrl" class="control-label"></label>
+                <input asp-for="TrainingCoursePdfUrl" class="form-control" />
+                <span asp-validation-for="TrainingCoursePdfUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               <br/>
+            <input type="submit" value="Create" class="btn btn-danger btn-buy-now" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" >Back to List</a>
+</div>
+

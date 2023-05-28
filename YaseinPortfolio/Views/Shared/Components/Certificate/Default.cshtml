@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Certificate>
+<section id="Certificate" class="section">
+   <div class="container text-center">
+      <h6 class="subtitle">My achievement</h6>
+      <h6 class="section-title mb-4">Certificates & Courses</h6>
+
+      <div class="row text-left">
+         @foreach (var item in Model.OrderByDescending(c => c.CertificateReleaseDate))
+         {
+            <article class="Certificates_card">
+               <div class="Certificates_temporary_text">
+                  <img src="~/portfolioImages/Certificates/@item.CertificateImg" class="Certificates_card_image">
+               </div>
+               <div class="Certificates_card_content">
+                  <span class="Certificates_card_title">@item.CertificateName</span>
+                  <span class="Certificates_card_subtitle">
+                     Provided By: @item.CertificateGiver
+                     <br />
+                     Issued on: @item.CertificateReleaseDate.ToString("dd-MM-yyyy")
+                  </span>
+                  <p class="Certificates_card_description">@item.CertificateDescription</p>
+                  <a href="@item.CertificatePdf" target="_blank" class="btn btn-primary rounded card_title_a">Certificate</a>
+               </div>
+            </article>
+         }
+      </div>
+   </div>
+</section>

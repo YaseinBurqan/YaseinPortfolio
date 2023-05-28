@@ -1,0 +1,45 @@
+﻿@model YaseinPortfolio.Models.AboutMe
+
+@{
+   ViewData["Title"] = "Create";
+}
+
+<h1>Create About Me</h1>
+
+<hr />
+<div class="row">
+   <div class="col-md-4">
+      <form asp-action="Create" enctype="multipart/form-data">
+         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+         <div class="form-group">
+            <label asp-for="AboutMeMyName" class="control-label"></label>
+            <input asp-for="AboutMeMyName" class="form-control" required />
+            <span asp-validation-for="AboutMeMyName" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+            <label asp-for="AboutMeImage" class="control-label"></label>
+            <input asp-for="AboutMeImage" type="file" accept="image/*" class="form-control" required />
+            <span asp-validation-for="AboutMeImage" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+            <label asp-for="AboutMeSubtitle" class="control-label"></label>
+            <input asp-for="AboutMeSubtitle" class="form-control" required />
+            <span asp-validation-for="AboutMeSubtitle" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+            <label asp-for="AboutMeParagraph" class="control-label"></label>
+            <textarea asp-for="AboutMeParagraph" rows="5" class="form-control" placeholder=" " required></textarea>
+            <span asp-validation-for="AboutMeParagraph" class="text-danger"></span>
+         </div>
+
+         <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+         </div>
+      </form>
+   </div>
+</div>
+
+<div>
+   <a asp-action="Index">Back to List</a>
+</div>
+

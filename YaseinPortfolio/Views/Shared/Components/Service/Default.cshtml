@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Service>
+
+<!-- Service section -->
+<section id="Service" class="section">
+   <div class="container text-center">
+      <h6 class="subtitle">Service</h6>
+      <h6 class="section-title mb-4">What I Do</h6>
+
+      <div class="row" style="">
+         @foreach (var item in Model)
+         {
+            <div class="flip-card">
+               <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                     <p class="title">@item.ServiceName</p>
+                     <p>Hover Me</p>
+                  </div>
+                  <div class="flip-card-back">
+                     <p>@item.ServiceDescription</p>
+                  </div>
+               </div>
+            </div>
+         }
+      </div>
+   </div>
+</section>
+<!-- End of Sectoin -->

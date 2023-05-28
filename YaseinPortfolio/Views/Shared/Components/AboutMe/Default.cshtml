@@ -1,0 +1,26 @@
+﻿@model IEnumerable<AboutMe>
+
+<!-- About section -->
+<section id="AboutMe" class="section mt-3">
+    <div class="container mt-5">
+
+        @foreach (var item in Model)
+        {
+
+            <div class="row text-center text-md-left">
+                <div class="col-md-3">
+                    <img src="~/portfolioImages/AboutMe/@item.AboutMeImage" alt="" class="img-thumbnail mb-4">
+                </div>
+                <div class="pl-md-4 col-md-9">
+                    <h6 class="title">@item.AboutMeMyName</h6>
+                    <p class="subtitle">@item.AboutMeSubtitle</p>
+                    <p>
+                        @item.AboutMeParagraph
+                    </p>
+                </div>
+            </div>
+        }
+
+    </div>
+</section>
+<!-- End Of About section -->

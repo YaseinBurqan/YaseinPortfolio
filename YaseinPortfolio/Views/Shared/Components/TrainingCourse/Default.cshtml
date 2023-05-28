@@ -1,0 +1,37 @@
+﻿@model IEnumerable<TrainingCourse>
+
+<!-- Portfolio section -->
+<section id="TrainingCourse" class="section">
+   <div class="container text-center">
+      @if (Model.Any())
+      {
+         <h6 class="subtitle">Achievements</h6>
+         <h6 class="section-title mb-4">Training Course That I Have</h6>
+         <div class="row">
+            @foreach (var item in Model)
+            {
+               <div class="col-sm-4">
+                  <div class="img-wrapper">
+                     <img src="@item.TrainingCourseImg" alt="">
+                     <div class="overlay">
+                        <div class="overlay-infos">
+                           <h5>@item.TrainingCourseName</h5>
+                           <h6>@item.CertificateBodyIssuingTheCertificate</h6>
+                           <a href="@item.TrainingCoursePdfUrl"><i class="ti-link"></i></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            }
+         </div>
+      }
+      else
+      {
+         <div>
+         </div>
+      }
+   </div>
+   <br />
+   <br />
+</section>
+<!-- End of portfolio section -->

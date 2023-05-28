@@ -1,0 +1,62 @@
+﻿@model YaseinPortfolio.Models.Experience
+
+@{
+   ViewData["Title"] = "Create";
+}
+
+<h1>Create New Experience</h1>
+
+<hr />
+<div class="row">
+   <div class="col-md-4">
+      <form method="post" asp-action="Create" enctype="multipart/form-data">
+         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+         <div class="form-group">
+            <label asp-for="ExperienceJobName" class="control-label"></label>
+            <input asp-for="ExperienceJobName" class="form-control" />
+            <span asp-validation-for="ExperienceJobName" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+            <label asp-for="ExperienceCompanyName" class="control-label"></label>
+            <input asp-for="ExperienceCompanyName" class="form-control" />
+            <span asp-validation-for="ExperienceCompanyName" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+            <label asp-for="ExperienceCompanyImg" class="control-label"></label>
+            <input asp-for="ExperienceCompanyImg" type="file" accept="image/*" class="form-control" required />
+            <span asp-validation-for="ExperienceCompanyImg" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+            <label asp-for="ExperienceStartDate" class="control-label"></label>
+            <input asp-for="ExperienceStartDate" class="form-control" />
+            <span asp-validation-for="ExperienceStartDate" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+            <label asp-for="ExperienceEndtDate" class="control-label"></label>
+            <input asp-for="ExperienceEndtDate" class="form-control" />
+            <span asp-validation-for="ExperienceEndtDate" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+            <label asp-for="ExperienceCertificatePdf" class="control-label"></label>
+            <input asp-for="ExperienceCertificatePdf" class="form-control" />
+            <span asp-validation-for="ExperienceCertificatePdf" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+            <label asp-for="ExperienceDescription" class="control-label"></label>
+            <textarea asp-for="ExperienceDescription" rows="5" class="form-control" placeholder=" " required></textarea>
+            <span asp-validation-for="ExperienceDescription" class="text-danger"></span>
+         </div>
+
+         <div class="form-group">
+            <br />
+
+            <input type="submit" value="Create" class="btn btn-danger btn-buy-now" />
+         </div>
+      </form>
+   </div>
+</div>
+
+<div>
+   <a asp-action="Index">Back to List</a>
+</div>
+

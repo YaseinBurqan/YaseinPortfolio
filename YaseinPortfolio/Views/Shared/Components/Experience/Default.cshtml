@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Experience>
+<section id="Experience" class="section">
+   <div class="container text-center">
+      <h6 class="subtitle">Experience</h6>
+      <h6 class="section-title mb-4">What Experience I Have?</h6>
+
+      <div class="row text-left">
+         @foreach (var item in Enumerable.Reverse(Model))
+         {
+            @*<div class="card" style="width: 18rem;">
+         <img class="card-img-top" src="~/portfolioImages/Experiences/@item.ExperienceCompanyImg" alt="Card image cap">
+         <div class="card-body">
+         <h5 class="card-title">@item.ExperienceJobName</h5>
+         </div>
+         <ul class="list-group list-group-flush">
+         <li class="list-group-item">@item.ExperienceCompanyName</li>
+         <li class="list-group-item">@item.ExperienceStartDate</li>
+         <li class="list-group-item">@item.ExperienceEndtDate</li>
+         </ul>
+         <div class="card-body">
+         <p class="card-text">@item.ExperienceDescription</p>
+         <a href="@item.ExperienceCertificatePdf" class="card-link">Experience Certificate Pdf</a>
+         </div>
+         <p>@item.ExperienceStartDate.ToString("MM-yyyy") - @item.ExperienceEndtDate.ToString("MM-yyyy")</p>
+
+         </div>*@
+
+            <div class="experiance-cards">
+               <div class="experiance-card">
+                  <div class="experiance-first-face">
+                     <div>
+                        <img class="experiance-img" src="~/portfolioImages/Experiences/@item.ExperienceCompanyImg" alt="">
+                     </div>
+
+                     <div>
+
+                        <h2 class="experiance-card-title-h2">@item.ExperienceJobName</h2>
+
+                        <span>
+                           Company :
+                        </span>
+
+                        <h4 class="experiance-card-title-h4">@item.ExperienceCompanyName</h4>
+
+                        <h6 class="experiance-card-title-h6">Start Date : @item.ExperienceStartDate.ToString("MM-yyyy")</h6>
+                        <h6 class="experiance-card-title-h6">End Date : @item.ExperienceEndtDate.ToString("MM-yyyy")</h6>
+
+                     </div>
+                  </div>
+
+                  <p class="experiance-card-desc">
+                     <span style="font-size:20px">@item.ExperienceCompanyName</span>
+                     <br />
+                     <span>
+                        @item.ExperienceDescription
+                     </span>
+                     <br />
+                     <span>
+                        <a href="@item.ExperienceCertificatePdf" target="_blank" class="card-link">Experience Certificate Pdf</a>
+                     </span>
+                  </p>
+
+               </div>
+            </div>
+         }
+      </div>
+   </div>
+
+</section>
+

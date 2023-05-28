@@ -1,0 +1,85 @@
+﻿.experiance-card {
+   margin: 15px;
+   position: relative;
+   width: 250px;
+   max-width: 250px;
+   height: 370px;
+   max-height: 370px;
+   border: 2px solid #ff7a57;
+   box-shadow: 0 5px 15px -6px #808080;
+   border-radius: 20px;
+
+
+}
+
+.experiance-first-face {
+   align-items: center;
+   justify-content: space-between;
+   margin: auto;
+   background-color: #f1f1f1;
+   border-radius: 20px;
+   height: 366px;
+   display: block;
+   text-align: center;
+}
+
+.experiance-card-title-h2 {
+   display: block;
+   text-align: center;
+   color: #6c757d;
+}
+
+.experiance-card .experiance-img {
+   width: 100%;
+   height: 98%;
+   border-radius:20px;
+   object-fit: cover;
+   display: block;
+   position: relative;
+}
+
+.experiance-img{
+max-height:200px;
+}
+
+.experiance-card-desc {
+   justify-content: space-between;
+   display: block;
+   font-size: 15px;
+   font-family: sans-serif;
+   position: absolute;
+   height: 0;
+   top: 0;
+   opacity: 0;
+   padding: 18px 8%;
+   background-color: #f1f1f1;
+   overflow-y: scroll;
+   transition: 0.8s ease;
+   border-radius: 20px;
+   text-align: center;
+
+
+}
+
+.experiance-card:hover .experiance-card-desc {
+   opacity: 1;
+   height: 100%;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+   width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   box-shadow: inset 0 0 5px grey;
+   border-radius: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background: #ff7a57;
+   border-radius: 4px;
+}

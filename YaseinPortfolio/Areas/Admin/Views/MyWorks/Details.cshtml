@@ -1,0 +1,35 @@
+﻿@model YaseinPortfolio.Models.MyWork
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Work Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MyWorkName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MyWorkName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MyWorkImg)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MyWorkImg)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MyWorkUrl)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MyWorkUrl)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.MyWorkId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

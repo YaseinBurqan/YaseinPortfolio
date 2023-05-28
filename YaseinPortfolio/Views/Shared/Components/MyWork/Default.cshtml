@@ -1,0 +1,32 @@
+﻿@model IEnumerable<MyWork>
+
+<!-- Portfolio section -->
+<section id="MyWork" class="section">
+   <div class="container text-center">
+      @if (Model.Any())
+      {
+         <h6 class="subtitle">Works</h6>
+         <h6 class="section-title mb-4">Check My Wonderful Works</h6>
+
+         <div class="row">
+            @foreach (var item in Model)
+            {
+
+               <div class="col-sm-4">
+                  <div class="img-wrapper">
+                     <img src="~/assets/imgs/yasein.jpg" alt="">
+                     <div class="overlay">
+                        <div class="overlay-infos">
+                           <h5>@item.MyWorkName</h5>
+                           <a href="@item.MyWorkUrl"><i class="ti-zoom-in"></i></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            }
+         </div>
+      }
+   </div>
+</section>
+<hr />
+<!-- End of portfolio section -->

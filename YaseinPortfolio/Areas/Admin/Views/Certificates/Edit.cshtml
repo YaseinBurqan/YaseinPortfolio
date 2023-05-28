@@ -1,0 +1,57 @@
+﻿@model YaseinPortfolio.Models.Certificate
+
+@{
+   ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Certificate</h1>
+
+<hr />
+<div class="row">
+   <div class="col-md-4">
+      <form asp-action="Edit" enctype="multipart/form-data">
+         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+         <input type="hidden" asp-for="CertificateId" />
+         <div class="form-group">
+            <label asp-for="CertificateName" class="control-label"></label>
+            <input asp-for="CertificateName" class="form-control" />
+            <span asp-validation-for="CertificateName" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+            <label asp-for="CertificateImg" class="control-label"></label>
+            <input asp-for="CertificateImg" type="file" accept="image/*" class="form-control" />
+            <span asp-validation-for="CertificateImg" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+            <label asp-for="CertificateGiver" class="control-label"></label>
+            <input asp-for="CertificateGiver" class="form-control" />
+            <span asp-validation-for="CertificateGiver" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+            <label asp-for="CertificateReleaseDate" class="control-label"></label>
+            <input asp-for="CertificateReleaseDate" class="form-control" />
+            <span asp-validation-for="CertificateReleaseDate" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+            <label asp-for="CertificatePdf" class="control-label"></label>
+            <input asp-for="CertificatePdf" class="form-control" />
+            <span asp-validation-for="CertificatePdf" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+            <label asp-for="CertificateDescription" class="control-label"></label>
+            <textarea asp-for="CertificateDescription" rows="5" class="form-control" placeholder=" " required></textarea>
+            <span asp-validation-for="CertificateDescription" class="text-danger"></span>
+         </div>
+         <div class="form-group">
+            <br />
+
+            <input type="submit" value="Save" class="btn btn-danger btn-buy-now" />
+         </div>
+      </form>
+   </div>
+</div>
+
+<div>
+   <a asp-action="Index">Back to List</a>
+</div>
+

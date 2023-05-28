@@ -1,0 +1,53 @@
+.product-image {
+   transition: all 0.3s ease-out;
+   display: inline-block;
+   position: relative;
+   overflow: hidden;
+   height: 100%;
+   float: right;
+   width: 120px;
+   height: 120px;
+   display: inline-block;
+   border: 2px solid #ff7a57;
+   border-radius: 15px;
+   margin: 10px;
+}
+
+.skills_img {
+   width: 100%;
+   height: 100%;
+}
+
+.info {
+   background: #f2f2f2;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+   transition: all 0.3s ease-out;
+   transform: translateX(-100%);
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   left: 0;
+   top: 0;
+  
+}
+
+.skills_h2 {
+   position: absolute;
+   left: 13%;
+   top: 30%;
+}
+
+.product-image:hover .info {
+   transform: translateX(0);
+}
+
+
+
+.product-image:hover img {
+   transition: all 0.3s ease-out;
+}
+
+.product-image:hover img {
+   transform: scale(1.2, 1.2);
+}
+

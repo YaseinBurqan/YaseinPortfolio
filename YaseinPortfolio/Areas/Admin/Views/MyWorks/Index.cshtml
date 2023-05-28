@@ -1,0 +1,47 @@
+﻿@model IEnumerable<YaseinPortfolio.Models.MyWork>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Works Page</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MyWorkName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MyWorkImg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MyWorkUrl)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MyWorkName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MyWorkImg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MyWorkUrl)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MyWorkId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MyWorkId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MyWorkId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
