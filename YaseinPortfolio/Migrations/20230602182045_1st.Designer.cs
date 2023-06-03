@@ -10,8 +10,8 @@ using YaseinPortfolio.Models.Data;
 namespace YaseinPortfolio.Migrations
 {
     [DbContext(typeof(YaseinPortofolioDbContext))]
-    [Migration("20230527235336_3st")]
-    partial class _3st
+    [Migration("20230602182045_1st")]
+    partial class _1st
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -223,6 +223,9 @@ namespace YaseinPortfolio.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("AboutMeEntryDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("AboutMeImage")
                         .HasColumnType("nvarchar(max)");

@@ -2,23 +2,23 @@
 
 <!-- Service section -->
 <section id="Skill" class="section">
-   <div class="container text-center">
-      <h6 class="subtitle">Skill</h6>
-      <h6 class="section-title mb-4">
-         Why Choose me
-      </h6>
+    <div class="container text-center">
+        <h6 class="subtitle">Skill</h6>
+        <h6 class="section-title mb-4">
+            Why Choose me
+        </h6>
 
-      <div class="row">
-         @foreach (var item in Enumerable.Reverse(Model))
-         {
-          <div class="product-image">
-         <img src="~/portfolioImages/Skills/@item.SkillImg" class="skills_img" />
-        @* <div class="info">
-         <h2 class="skills_h2"> @item.SkillName</h2>
-         </div>*@
-         </div>
-         }
-      </div>
-   </div>
+        <div class="row" style="text-align:center;justify-content:center;">
+            @foreach (var item in Enumerable.Reverse(Model))
+            {
+                <div class="product-image">
+                    <img src="~/portfolioImages/Skills/@item.SkillImg" class="skills_img" />
+                    @* <div class="info">
+                <h2 class="skills_h2"> @item.SkillName</h2>
+                </div>*@
+                </div>
+            }
+        </div>
+    </div>
 </section>
 <!-- End of Section -->

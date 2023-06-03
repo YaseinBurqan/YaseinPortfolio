@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using YaseinPortfolio.Models.Data;
 
 namespace YaseinPortfolio.ViewComponents
@@ -12,7 +13,7 @@ namespace YaseinPortfolio.ViewComponents
         }
         public IViewComponentResult Invoke()
         {
-            return View(_dbContext.Experiences);
+            return View(_dbContext.Experiences.OrderByDescending(item => item.EntryDate).ToList());
         }
     }
 }

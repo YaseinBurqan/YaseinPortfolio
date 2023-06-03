@@ -1,54 +1,60 @@
 ﻿@model IEnumerable<YaseinPortfolio.Models.AboutMe>
 
 @{
-   ViewData["Title"] = "Index";
+    ViewData["Title"] = "Index";
 }
 
 <h1>About Me Page </h1>
 
 <p>
-   <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
-   <thead>
-      <tr>
-         <th>
-            @Html.DisplayNameFor(model => model.AboutMeMyName)
-         </th>
-         <th>
-            @Html.DisplayNameFor(model => model.AboutMeImage)
-         </th>
-         <th>
-            @Html.DisplayNameFor(model => model.AboutMeSubtitle)
-         </th>
-         <th>
-            @Html.DisplayNameFor(model => model.AboutMeParagraph)
-         </th>
-         <th></th>
-      </tr>
-   </thead>
-   <tbody>
-      @foreach (var item in Model)
-      {
-         <tr>
-            <td>
-               @Html.DisplayFor(modelItem => item.AboutMeMyName)
-            </td>
-            <td>
-               <img src="~/portfolioImages/AboutMe/@item.AboutMeImage" width="100" />
-            </td>
-            <td>
-               @Html.DisplayFor(modelItem => item.AboutMeSubtitle)
-            </td>
-            <td>
-               @Html.DisplayFor(modelItem => item.AboutMeParagraph)
-            </td>
-            <td>
-               <a asp-action="Edit" asp-route-id="@item.AboutMeId">Edit</a> |
-               <a asp-action="Details" asp-route-id="@item.AboutMeId">Details</a> |
-               <a asp-action="Delete" asp-route-id="@item.AboutMeId">Delete</a>
-            </td>
-         </tr>
-      }
-   </tbody>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AboutMeMyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AboutMeImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AboutMeSubtitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AboutMeParagraph)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AboutMeEntryDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AboutMeMyName)
+                </td>
+                <td>
+                    <img src="~/portfolioImages/AboutMe/@item.AboutMeImage" width="100" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AboutMeSubtitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AboutMeParagraph)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AboutMeEntryDate)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.AboutMeId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.AboutMeId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.AboutMeId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>

@@ -267,6 +267,9 @@ namespace YaseinPortfolio.Migrations
                     b.Property<DateTime>("CertificateReleaseDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime>("EntryDate")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("CertificateId");
 
                     b.ToTable("Certificates");
@@ -285,6 +288,9 @@ namespace YaseinPortfolio.Migrations
                     b.Property<string>("ContactMeByEmailSubject")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("EntryDate")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("ContactMeByEmailId");
 
                     b.ToTable("ContactMeByEmails");
@@ -296,6 +302,9 @@ namespace YaseinPortfolio.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("EntryDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("ExperienceCertificatePdf")
                         .HasColumnType("nvarchar(max)");
@@ -330,6 +339,9 @@ namespace YaseinPortfolio.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime>("EntryDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("MyWorkImg")
                         .HasColumnType("nvarchar(max)");
 
@@ -351,6 +363,9 @@ namespace YaseinPortfolio.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime>("EntryDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ServiceDescription")
                         .HasColumnType("nvarchar(max)");
 
@@ -368,6 +383,9 @@ namespace YaseinPortfolio.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("EntryDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("SkillImg")
                         .HasColumnType("nvarchar(max)");
@@ -389,6 +407,9 @@ namespace YaseinPortfolio.Migrations
 
                     b.Property<string>("CertificateBodyIssuingTheCertificate")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("EntryDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("TrainingCourseImg")
                         .HasColumnType("nvarchar(max)");

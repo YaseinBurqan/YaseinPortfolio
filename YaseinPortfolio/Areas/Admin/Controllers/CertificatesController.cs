@@ -30,7 +30,7 @@ namespace YaseinPortfolio.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             return _context.Certificates != null ?
-                        View(await _context.Certificates.ToListAsync()) :
+                        View(await _context.Certificates.OrderByDescending(item => item.EntryDate).ToListAsync()) :
                         Problem("Entity set 'PortfolioDbContext.Certificates'  is null.");
         }
 

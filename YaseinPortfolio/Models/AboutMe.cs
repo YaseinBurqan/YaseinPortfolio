@@ -9,7 +9,7 @@ namespace YaseinPortfolio.Models
         public string AboutMeSubtitle { get; set; }
         public string AboutMeParagraph { get; set; }
         public string AboutMeImage { get; set; }
-        public DateTime? AboutMeEntryDate { get; set; }
+        public DateTime? AboutMeEntryDate { get; set; } = DateTime.Now;
 
     }
 }

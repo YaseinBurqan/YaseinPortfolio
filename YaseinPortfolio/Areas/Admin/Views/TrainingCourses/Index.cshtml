@@ -24,30 +24,37 @@
             <th>
                 @Html.DisplayNameFor(model => model.TrainingCoursePdfUrl)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EntryDate)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TrainingCourseName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TrainingCourseImg)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CertificateBodyIssuingTheCertificate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TrainingCoursePdfUrl)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.TrainingCourseId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.TrainingCourseId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.TrainingCourseId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrainingCourseName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrainingCourseImg)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CertificateBodyIssuingTheCertificate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrainingCoursePdfUrl)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EntryDate)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.TrainingCourseId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.TrainingCourseId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.TrainingCourseId">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

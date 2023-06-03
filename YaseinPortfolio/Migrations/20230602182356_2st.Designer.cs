@@ -10,8 +10,8 @@ using YaseinPortfolio.Models.Data;
 namespace YaseinPortfolio.Migrations
 {
     [DbContext(typeof(YaseinPortofolioDbContext))]
-    [Migration("20230218005446_1st")]
-    partial class _1st
+    [Migration("20230602182356_2st")]
+    partial class _2st
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -215,6 +215,33 @@ namespace YaseinPortfolio.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("YaseinPortfolio.Models.AboutMe", b =>
+                {
+                    b.Property<int>("AboutMeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("AboutMeEntryDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("AboutMeImage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AboutMeMyName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AboutMeParagraph")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AboutMeSubtitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AboutMeId");
+
+                    b.ToTable("AboutMes");
                 });
 
             modelBuilder.Entity("YaseinPortfolio.Models.Certificate", b =>

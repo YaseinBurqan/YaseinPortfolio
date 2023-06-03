@@ -30,7 +30,7 @@ namespace YaseinPortfolio.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             return _context.AboutMes != null ?
-                        View(await _context.AboutMes.ToListAsync()) :
+                        View(await _context.AboutMes.OrderByDescending(item => item.AboutMeEntryDate).ToListAsync()) :
                         Problem("Entity set 'PortfolioDbContext.AboutMes'  is null.");
         }
 
